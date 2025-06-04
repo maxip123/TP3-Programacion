@@ -1,15 +1,15 @@
 import React from 'react'
 import { Header } from "../Components/Header";
-import Mainproyects from '../Components/mains/Mainproyects';
+import Maincontact from '../Components/mains/Maincontact';
 import { Footer } from "../Components/Footer";
-const Proyects = () => {
+const Contact = () => {
   return (
     <>
       <Header></Header>
-      <Mainproyects></Mainproyects>
+      <Maincontact></Maincontact>
       <Footer></Footer>
     </>
   )
 }
 
-export default Proyects
+export default Contact

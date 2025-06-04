@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "bootstrap";
+import { Button,Form,Container } from "react-bootstrap"; 
 
 const Maincontact = () => {
   const initialState = {
@@ -7,28 +7,30 @@ const Maincontact = () => {
     consulta: "",
   };
   const [consulta, setConsulta] = useState(initialState);
-
-  const handlechange = (e) => {
-    setConsulta({...consulta[e.target.name]:e.target.value})
+  const handleChange = (e) => {
+    setConsulta({ ...consulta, [e.target.name]: e.target.value });
   };
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(consulta)
+  };
   return (
-    <div>
-      <form action="">
-        <h2>Contactame a mi mail</h2>
-        <label htmlFor="">Nombre</label>
-        <input type="text" onChange={handlechange} name="nombre" />
-        <br />
-        <label htmlFor="">Consulta</label>
-        <input type="text" onChange={handlechange} name="consulta" />
-        <br />
-
-        <Button variant="primary" type="submit">
+    <Container>
+      <Form>
+        <h2 className="text-center">Contáctame a mi Mail</h2>
+        <Form.Group className="mb-3">
+        <Form.Label>Ingrese su nombre</Form.Label>
+        <Form.Control type="text" onChange={handleChange} name="nombre"  required/>
+      </Form.Group>
+        <Form.Group className="mb-3">
+        <Form.Label>Ingrese su consulta</Form.Label>
+        <Form.Control type="text" onChange={handleChange} name="consulta"  required/>
+      </Form.Group>
+        <Button variant="primary" type="submit" onSubmit={handleSubmit}>
           Enviar
         </Button>
-      </form>
-    </div>
+      </Form>
+    </Container>
   );
 };
-
-export default Maincontact;
+export default Maincontact
