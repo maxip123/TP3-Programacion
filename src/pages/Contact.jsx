@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header } from "../Components/Header";
-import Maincontact from '../Components/mains/Maincontact';
+import Maincontact from '../Components/main/Maincontact';
 import { Footer } from "../Components/Footer";
 const Contact = () => {
   return (

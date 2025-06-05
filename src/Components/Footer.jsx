@@ -6,7 +6,7 @@ export const Footer = () => {
     const {color}=useStore()
   return (
     <footer className={color ?"bg-dark  text-light":"bg-light text-dark"}>
-        <h3 className='text-center p-2'>hola</h3>
+        <h3 className='text-center p-4 m-0'>hola</h3>
 
     </footer>
   )

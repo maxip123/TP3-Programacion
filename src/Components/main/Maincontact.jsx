@@ -15,15 +15,15 @@ const Maincontact = () => {
     console.log(consulta)
   };
   return (
-    <Container>
+    <Container className="main">
       <Form>
-        <h2 className="text-center">Contáctame a mi Mail</h2>
+        <h2 className="text-center m-5 fs-1">Contáctame a mi Mail</h2>
         <Form.Group className="mb-3">
-        <Form.Label>Ingrese su nombre</Form.Label>
+        <Form.Label className="fs-4">Ingrese su nombre</Form.Label>
         <Form.Control type="text" onChange={handleChange} name="nombre"  required/>
       </Form.Group>
         <Form.Group className="mb-3">
-        <Form.Label>Ingrese su consulta</Form.Label>
+        <Form.Label className="fs-4">Ingrese su consulta</Form.Label>
         <Form.Control type="text" onChange={handleChange} name="consulta"  required/>
       </Form.Group>
         <Button variant="primary" type="submit" onSubmit={handleSubmit}>

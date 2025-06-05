@@ -13,9 +13,9 @@ export const Header = () => {
     <>
       <Navbar bg={color ?"dark ":"light"} data-bs-theme={color ?"dark ":"light"}>
         <Container>
-          <Navbar.Brand as={Link} className={color ?"text-light":"text-dark"} to="/">Navbar</Navbar.Brand>
+          <Navbar.Brand as={Link} className={color ?"text-light":"text-dark"} to="/">Mi Portafolio</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link as={Link} className={color ?"text-light":"text-dark"} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} className={color ?"text-light":"text-dark"} to="/">Inicio</Nav.Link>
             <Nav.Link as={Link} className={color ?"text-light":"text-dark"} to="/contact">Contacto</Nav.Link>
             <Nav.Link as={Link} className={color ?"text-light":"text-dark"} to="/Proyect">Proyectos</Nav.Link>
             <Button variant={color ?"light ":"dark"} onClick={cambiarColor}>Cambiar color</Button>
