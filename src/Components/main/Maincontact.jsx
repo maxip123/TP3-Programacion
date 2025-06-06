@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Button, Form, Container } from "react-bootstrap";
+import useStore from "../../store/useStore";
 
 const Maincontact = () => {
+  const { color } = useStore();
   const initialState = {
     nombre: "",
     consulta: "",
@@ -15,7 +17,7 @@ const Maincontact = () => {
     console.log(consulta);
   };
   return (
-    <Container className="main">
+    <Container className={color ? "bg-dark text-light main" : "bg-light text-dark main"} >
       <Form>
         <h2 className="text-center m-5 fs-1">Contáctame a mi Mail</h2>
         <Form.Group className="mb-3">

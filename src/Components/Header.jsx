@@ -14,7 +14,7 @@ export const Header = () => {
         bg={color ? "dark" : "light"}
         data-bs-theme={color ? "dark" : "light"}
         expand="lg"
-        className="mb-4 shadow-sm"
+        className=" shadow-sm"
       >
         <Container>
           <Navbar.Brand
